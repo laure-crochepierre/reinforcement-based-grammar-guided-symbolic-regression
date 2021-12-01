@@ -1,0 +1,7 @@
+<e>  ::=  (<e> <dop> <e>) | (<etw1> <dopw1> <etw1>) | <sop>(<e>) | <et> | probs [1, 1, 1, 1]
+<et> ::= (- x[:,<varidx>]) | x[:,<varidx>] | probs [1, 1]
+<etw1> ::= ( - x[:,<varidx>]) |  x[:,<varidx>] | 1 | probs [1, 1, 1]
+<dopw1> ::=  + |  - | probs [1 for x in range(2)]
+<dop> ::= + | - | * | / | probs [1 for x in range(4)]
+<sop> ::= np.cos | np.sin | np.exp | np.log | probs [1 for x in range(4)]
+<varidx> ::= GE_RANGE:dataset_n_vars | probs [1 for x in range(10)]
